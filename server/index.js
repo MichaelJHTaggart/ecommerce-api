@@ -1,9 +1,9 @@
 const express = require('express')
-const app = express()
+const getProducts = require('./getProducts')
 const port = 4000
 const products = require('../products.json')
-const getProducts = require('./getProducts')
 
+const app = express()
 
 
 app.get('/api/products', getProducts.allOfThem);
